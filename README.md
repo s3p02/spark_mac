@@ -37,7 +37,7 @@ Update with the following in the .bash_profile:
 export SPARK_HOME="/Users/YOUR_USER_NAME/spark"
 export PATH="$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin"
 ```
-
+Source your bash_profile
 ```
 source ~/.bash_profile
 ```
