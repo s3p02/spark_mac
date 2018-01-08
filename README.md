@@ -41,7 +41,7 @@ Source your bash_profile
 ```
 source ~/.bash_profile
 ```
-Ensure you have [Java](https://www.java.com/en/download/mac_download.jsp) runtime installed on the system.
+Ensure you have Java [runtime](https://www.java.com/en/download/mac_download.jsp) and [development kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) installed on the system.
 # Verify Installation:
 
 ```
