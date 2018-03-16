@@ -79,7 +79,39 @@ Create softlink to spark shell:
 ```
 ln -s zeppelin-0.7.3-bin-all zeppelin
 ```
-In case you update your spark version to a later one, you may just change this.
+In case you update your zeppelin version to a later one, you may just change this.
+
+We need to configure zeppelin:
+```
+
+cd ~/zeppelin/conf
+
+```
+Make copies of the templates of zeppelin-env.sh.template and zeppelin-site.xml.template
+```
+
+mv zeppelin-env.sh.template zeppelin-env.sh
+
+mv zeppelin-site.xml.template zeppelin-site.xml
+
+```
+
+Set JAVA_HOME and SPARK_HOME in the zeppelin-env.sh file:
+
+```
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export SPARK_HOME="/Users/YOUR_USER_NAME/spark"
+```
+
+Change port number from 8080 to 8082 to prevent conflict between spark and zeppelin ports in the zeppelin-site.xml file:
+
+```
+<property>
+  <name>zeppelin.server.port</name>
+  <value>8082</value>
+  <description>Server port.</description>
+</property>
+```
 
 Set bash_profile environment:
 
@@ -99,3 +131,5 @@ Source your bash_profile
 ```
 source ~/.bash_profile
 ```
+
+
