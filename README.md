@@ -132,4 +132,10 @@ Source your bash_profile
 source ~/.bash_profile
 ```
 
+SparkSubmit:
+
+```
+spark-submit   --class className   --master local[4] pathToJar --parameters:pathToInputFile,outputPathToSave 
+```
+
 
